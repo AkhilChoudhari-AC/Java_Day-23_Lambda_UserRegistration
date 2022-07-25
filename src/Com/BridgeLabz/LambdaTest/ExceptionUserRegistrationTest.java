@@ -86,5 +86,24 @@ public class ExceptionUserRegistrationTest {
     public void givenMobileNumber_IsNotProper_ReturnFalse() {
         boolean actualResult = exceptionUserRegistration.phoneNumber("91 90004564589");
         Assert.assertEquals(false, actualResult);
+
+    }
+    @Test
+    /**
+     * created method givePasswordRule1_IsProper_ReturnTrue() for true condition
+     */
+    public void givenPasswordRule1_IsProper_ReturnTrue() {
+        boolean actualResult = exceptionUserRegistration.passwordRule1("abcdefghi");
+        Assert.assertEquals(true, actualResult);
+    }
+
+    @Test
+    /**
+     * created method givePasswordRule1_IsNotProper_ReturnFalse() for false
+     * condition
+     */
+    public void givenPasswordRule1_IsNotProper_ReturnFalse() {
+        boolean actualResult = exceptionUserRegistration.passwordRule1("abcd");
+        Assert.assertEquals(false, actualResult);
     }
 }
