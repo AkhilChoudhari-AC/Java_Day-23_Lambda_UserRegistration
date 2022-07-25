@@ -12,6 +12,7 @@ import java.util.regex.Pattern;
  * pre-defined Mobile Format Country code follow by space and 10 digit number
  * UC5- As a User need to follow pre-defined Password rules. Rule1– minimum 8 Characters
  * UC6- Rule2 – Should have at least 1 Upper Case
+ * UC7- Rule3- Should have at least 1 numeric number in the password
  * @author user-Almas
  *
  */
@@ -99,10 +100,23 @@ public class ExceptionUserRegistration {
      * created method PasswordRule2 and passing parameter in this it will check
      * Password is valid or not result will be in true or false because method is
      * boolean type
-     * @return -return to method created
+
      */
     public boolean passwordRule2(String str) {
         Pattern pattern = Pattern.compile("^(?=.*[A-Z])(?=.*[a-z]).{8,}$");
+        Matcher matcher = pattern.matcher(str);
+        return matcher.matches();
+    }
+
+    /**
+     * created method PasswordRule3 and passing parameter in this it will check
+     * Password is valid or not having Minimum 8 Characters and first letters should
+     * be capital with one numeric number in that result will be in true or false
+     * because method is boolean type
+
+     */
+    public boolean passwordRule3(String str) {
+        Pattern pattern = Pattern.compile("^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]).{8,}$");
         Matcher matcher = pattern.matcher(str);
         return matcher.matches();
     }
