@@ -199,5 +199,4 @@ public class TestSampleEmailIdsTest {
         boolean actualResult = testSampleEmailIds.testForValidEmails("abc@gmail.com.1a");
         Assert.assertEquals(false, actualResult);
     }
-
 }
