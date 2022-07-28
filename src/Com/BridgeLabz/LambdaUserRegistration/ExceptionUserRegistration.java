@@ -3,20 +3,6 @@ package Com.BridgeLabz.LambdaUserRegistration;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/**
- * UC1- As a User need to enter a valid First Name - First name starts with Cap
- * and has minimum 3 characters
- * UC2- As a User need to enter a valid Last Name-Last name starts with Cap and
- * has minimum 3 characters
- * UC3- As a User need to enter a valid email UC4- As a User need to follow
- * pre-defined Mobile Format Country code follow by space and 10 digit number
- * UC5- As a User need to follow pre-defined Password rules. Rule1– minimum 8 Characters
- * UC6- Rule2 – Should have at least 1 Upper Case
- * UC7- Rule3- Should have at least 1 numeric number in the password
- * UC8- Rule4- Should have at Exactly 1 Special Character in the password
- * @author user-Almas
- *
- */
 public class ExceptionUserRegistration {
 
     /**
@@ -90,7 +76,8 @@ public class ExceptionUserRegistration {
      * created method PasswordRule1 and passing parameter in this it will check
      * Password is valid or not result will be in true or false because method is
      * boolean type
-
+     *
+     * @param password- passing password
      * @return -return to method created
      */
     public boolean passwordRule1(String str) {
@@ -103,7 +90,8 @@ public class ExceptionUserRegistration {
      * created method PasswordRule2 and passing parameter in this it will check
      * Password is valid or not result will be in true or false because method is
      * boolean type
-
+     *
+     * @param password- passing password
      * @return -return to method created
      */
     public boolean passwordRule2(String str) {
@@ -117,7 +105,8 @@ public class ExceptionUserRegistration {
      * Password is valid or not having Minimum 8 Characters and first letters should
      * be capital with one numeric number in that result will be in true or false
      * because method is boolean type
-
+     *
+     * @param password- passing password
      * @return -return to method created
      */
     public boolean passwordRule3(String str) {
@@ -132,7 +121,7 @@ public class ExceptionUserRegistration {
      * be capital with one numeric number and have one Exactly Special Character in
      * that result will be in true or false because method is boolean type
      *
-
+     * @param password- passing password
      * @return -return to method created
      */
     public boolean passwordRule4(String str) {
